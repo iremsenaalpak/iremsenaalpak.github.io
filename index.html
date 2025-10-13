@@ -3,50 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <!-- CSS doğru dizinde bağlı -->
+    <title>My Responsive Personal Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h1 class="page-title">Welcome to My Homepage!</h1>
+
     <div class="container">
-        <h1>Welcome to My Homepage!</h1>
-
-        <section>
-            <h2>About Me</h2>
-            <p><strong>Name:</strong> İrem Sena Alpak</p>
-            <p><strong>Department:</strong> Computer Engineering</p>
-            <p><strong>University:</strong> Ankara Bilim University</p>
-            <p><strong>Student ID:</strong> 210201030</p>
+        <!-- Section 1 -->
+        <section class="box">
+            <div class="title">About Me</div>
+            <div class="content">
+                <p><strong>Name:</strong> İrem Sena Alpak</p>
+                <p><strong>Department:</strong> Computer Engineering</p>
+                <p><strong>University:</strong> Ankara Bilim University</p>
+                <p><strong>Student ID:</strong> 210201030</p>
+            </div>
         </section>
 
-        <hr>
-
-        <section>
-            <h2>My Interests</h2>
-            <ul>
-                <li>Web Development</li>
-                <li>Programming</li>
-                <li>Listening to Music</li>
-                <li>Reading Books</li>
-            </ul>
+        <!-- Section 2 -->
+        <section class="box">
+            <div class="title">My Interests</div>
+            <div class="content">
+                <ul>
+                    <li>Web Development</li>
+                    <li>Programming</li>
+                    <li>Listening to Music</li>
+                    <li>Reading Books</li>
+                </ul>
+            </div>
         </section>
 
-        <hr>
-
-        <section>
-            <h2>My Hobbies</h2>
-            <ol>
-                <li>Coding</li>
-                <li>Listening to Music</li>
-                <li>Watching Movies</li>
-            </ol>
+        <!-- Section 3 -->
+        <section class="box">
+            <div class="title">My Hobbies</div>
+            <div class="content">
+                <ol>
+                    <li>Coding</li>
+                    <li>Listening to Music</li>
+                    <li>Watching Movies</li>
+                </ol>
+            </div>
         </section>
 
-        <hr>
-
-        <section class="table-section">
-            <h2>My Favorite Courses</h2>
-            <div class="table-wrapper">
+        <!-- 🟡 Section 4 (New Rating Table) -->
+        <section class="box">
+            <div class="title">My Favorite Courses</div>
+            <div class="content">
                 <table>
                     <tr>
                         <th>Course Name</th>
@@ -67,12 +70,14 @@
                 </table>
             </div>
         </section>
-
-        <footer>
-            <p>&copy; 2025 - All rights reserved</p>
-            <p><small>This page was created for HTML class assignment.</small></p>
-        </footer>
     </div>
+
+    <footer>
+        <p>&copy; 2025 - All rights reserved</p>
+        <p><small>This page was created for Responsive Web Design Lab.</small></p>
+    </footer>
 </body>
 </html>
+
+
 
