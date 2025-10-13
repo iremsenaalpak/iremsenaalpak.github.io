@@ -1,4 +1,4 @@
-/* Reset and Box Model */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,172 +11,137 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
 }
 
-/* Main Container */
-.container {
-    width: 100%;
-    max-width: 900px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    padding: 40px;
-}
-
-/* Headings */
-h1 {
-    color: #667eea;
+/* Page title */
+.page-title {
+    color: white;
     text-align: center;
     font-size: 2.5em;
-    margin-bottom: 25px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
 }
 
-h2 {
-    color: #764ba2;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-left: 5px solid #667eea;
-    padding-left: 15px;
-}
-
-/* Paragraphs */
-p {
-    color: #333;
-    font-size: 1.1em;
-    margin-bottom: 8px;
-}
-
-strong {
-    color: #667eea;
-}
-
-/* Horizontal Line */
-hr {
-    border: none;
-    height: 2px;
-    background: linear-gradient(to right, #667eea, #764ba2);
-    margin: 30px 0;
-}
-
-/* Lists */
-ul, ol {
-    margin-left: 40px;
-    margin-bottom: 20px;
-}
-
-li {
-    color: #555;
-    font-size: 1.05em;
-    margin-bottom: 6px;
-}
-
-/* Table Wrapper (scroll on mobile) */
-.table-wrapper {
+/* Main container for sections */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
-    overflow-x: auto;
+    max-width: 1200px;
 }
 
-/* Table */
+/* Box (each section) */
+.box {
+    position: relative;
+    flex: 1 1 30%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 60px 20px 20px;
+    min-width: 280px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Section title region */
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #667eea;
+    color: white;
+    padding: 8px 15px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Section content */
+.content {
+    color: #333;
+    line-height: 1.6;
+}
+
+.content ul, .content ol {
+    margin-left: 25px;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* ---------------------- */
+/* 📱 RESPONSIVE LAYOUT  */
+/* ---------------------- */
+
+/* Tablet: 768px–991px */
+@media (max-width: 991px) {
+    .container {
+        justify-content: space-around;
+    }
+
+    .box {
+        flex: 1 1 45%;
+    }
+
+    .page-title {
+        font-size: 2.2em;
+    }
+}
+
+/* Mobile: ≤767px */
+@media (max-width: 767px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 1.8em;
+    }
+
+    .title {
+        font-size: 0.9em;
+    }
+}
+/* Table Styling (for rating section) */
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 400px;
     margin-top: 10px;
+    min-width: 300px;
 }
 
 th, td {
-    padding: 12px 15px;
+    padding: 10px 15px;
     border-bottom: 1px solid #ddd;
     text-align: left;
 }
 
 th {
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
-    font-size: 1.05em;
+    color: white;
+    font-weight: 600;
 }
 
 tr:hover {
-    background-color: #f8f8f8;
+    background-color: #f3f3f3;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid #667eea;
-    color: #555;
-}
-
-footer small {
-    color: #999;
-}
-
-/* ---------------------- */
-/* 📱 RESPONSIVE DESIGN  */
-/* ---------------------- */
-
-/* Tablet (max-width: 992px) */
-@media (max-width: 992px) {
-    .container {
-        padding: 30px;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.6em;
-    }
-    p, li {
-        font-size: 1em;
-    }
-}
-
-/* Small Tablet (max-width: 768px) */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    .container {
-        padding: 25px;
-        border-radius: 12px;
-    }
-    h1 {
-        font-size: 1.8em;
-        text-align: center;
-    }
-    h2 {
-        font-size: 1.4em;
-    }
-    table {
-        font-size: 0.95em;
-    }
-}
-
-/* Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-    .container {
-        padding: 15px;
-    }
-    h1 {
-        font-size: 1.5em;
-        text-align: center;
-    }
-    h2 {
-        font-size: 1.2em;
-    }
-    p, li {
-        font-size: 0.95em;
-    }
-    table {
-        min-width: unset;
-    }
-    footer {
-        font-size: 0.9em;
-    }
-}
